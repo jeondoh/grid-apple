@@ -16,11 +16,9 @@ import {
 import { setRowData, setTitleData } from "./DummyData";
 
 function App() {
-  const titleData = setTitleData();
-  const rowData = setRowData();
-  const repeatNum = rowData.data.length;
-
-  console.log(rowData.data);
+  const titleData = setTitleData;
+  const rowData = setRowData;
+  const repeatNum = rowData.length;
 
   return (
     <>
@@ -37,7 +35,7 @@ function App() {
 
           <StickyCompanyName>
             <Rows repeatNum={repeatNum}>
-              {rowData.data.map((data) => (
+              {rowData.map((data) => (
                 <RowGroup key={data.title}>
                   <Row>{data.title}</Row>
                 </RowGroup>
@@ -45,21 +43,17 @@ function App() {
             </Rows>
           </StickyCompanyName>
 
-          {titleData.map((data) => (
-            <RowWrapper key={data}>
+          {Object.entries(titleData).map(([key, value]) => (
+            <RowWrapper key={key}>
               <RowTitle>
-                <span>{data}</span>
+                <span>{value}</span>
               </RowTitle>
               <Rows repeatNum={repeatNum}>
-                <RowGroup>
-                  <Row>안녕하세요</Row>
-                </RowGroup>
-                <RowGroup>
-                  <Row>안녕하세요</Row>
-                </RowGroup>
-                <RowGroup>
-                  <Row>안녕하세요</Row>
-                </RowGroup>
+                {rowData.map((data: any) => (
+                  <RowGroup>
+                    <Row>{data[key]}</Row>
+                  </RowGroup>
+                ))}
               </Rows>
             </RowWrapper>
           ))}

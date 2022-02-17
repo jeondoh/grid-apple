@@ -64,7 +64,7 @@ export const RowGroup = styled.div`
 `;
 
 export const RowTitle = styled.div`
-  margin: 5em 0;
+  margin: 5em 0 1em 0;
   text-align: left;
   padding-bottom: 2em;
   border-bottom: 1px solid lightgray;
@@ -77,5 +77,6 @@ export const RowTitle = styled.div`
 export const Row = styled.div`
   margin: 1em 0;
   font-size: 20px;
+  line-height: 2.5em;
   //background-color: tomato;
 `;

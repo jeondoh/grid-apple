@@ -1,29 +1,39 @@
-export function setTitleData(): string[] {
-  return [
-    "지원자격",
-    "필수스킬",
-    "우대",
-    "근무조건",
-    "전형절차",
-    "복리후생",
-    "접수기간",
-  ];
-}
-
 interface IRowData {
-  title: string;
+  title?: string;
+  eligibility: string;
+  skill: string;
+  preferential: string;
+  workCondition: string;
 }
 
-interface IRowsData {
-  data: IRowData[];
-}
+export const setTitleData: IRowData = {
+  eligibility: "지원자격",
+  skill: "필수스킬",
+  preferential: "우대",
+  workCondition: "근무조건",
+};
 
-export function setRowData(): IRowsData {
-  return {
-    data: [
-      { title: "(주)제네시스" },
-      { title: "(주)스파이더플랫폼" },
-      { title: "(주)비주얼" },
-    ],
-  };
-}
+export const setRowData: IRowData[] = [
+  {
+    title: "(주)제네시스",
+    eligibility: "경력",
+    skill:
+      "React, React-Native, javascript, typescript, java, github, objective-C",
+    preferential: "우대사항1",
+    workCondition: "근무조건1",
+  },
+  {
+    title: "(주)스파이더플랫폼",
+    eligibility: "신입",
+    skill: "spring",
+    preferential: "우대사항2",
+    workCondition: "근무조건2",
+  },
+  {
+    title: "(주)비주얼",
+    eligibility: "경력3년이상",
+    skill: "java",
+    preferential: "우대사항3",
+    workCondition: "근무조건3",
+  },
+];
