@@ -19,7 +19,11 @@ export const setRowData: IRowData[] = [
     eligibility: "경력",
     skill:
       "React, React-Native, javascript, typescript, java, github, objective-C",
-    preferential: "우대사항1",
+    preferential:
+      "React 및 React Native 경력 3년 이상</br>" +
+      "Figma를 이용한 협업을 경험해보신 분</br>" +
+      "코드 최적화, 퍼포먼스 향상에 관심이 많으신 분</br>" +
+      "업무 효율 향상 및 자동화에 관심이 많으신 분</br>",
     workCondition: "근무조건1",
   },
   {

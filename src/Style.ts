@@ -14,10 +14,9 @@ export const Header = styled.div`
 `;
 
 export const Footer = styled.div`
+  margin-top: 10rem;
   ${HF};
 `;
-
-export const Wrapper = styled.div``;
 
 export const Title = styled.section`
   margin: 2.5rem 0;
@@ -30,6 +29,9 @@ export const Main = styled.section`
   position: relative;
   margin: 0 auto;
   width: 61.25em;
+`;
+
+export const SelectWrapper = styled.div`
   text-align: center;
 `;
 
@@ -53,7 +55,7 @@ export const RowWrapper = styled.div`
 export const Rows = styled.div<IRows>`
   margin: 3rem 0;
   display: grid;
-  grid-gap: 5%;
+  grid-gap: 2%;
   grid-template-columns: repeat(${(props) => props.repeatNum}, 1fr);
   overflow-x: auto;
   //background-color: gainsboro;
@@ -76,7 +78,13 @@ export const RowTitle = styled.div`
 
 export const Row = styled.div`
   margin: 1em 0;
-  font-size: 20px;
-  line-height: 2.5em;
+  font-size: 14px;
+  line-height: 2em;
   //background-color: tomato;
+`;
+
+export const CompanyNameRow = styled.span`
+  display: block;
+  text-align: center;
+  font-size: 22px;
 `;
