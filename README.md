@@ -7,4 +7,3 @@
 
 ### npm
 - styled-components: 5.3.3
-- react-beautiful-dnd: 13.1.0
